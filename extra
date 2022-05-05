@@ -1,0 +1,82 @@
+!DOCTYPE html>
+<html lang="ean">
+  <head>
+    <link rel='stylesheet' type='text/css' href='stylesheet.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheet1.css'>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>"Uniware Web-App"</title>
+  </head>
+  <body>
+    <center><img src = "" id="uniware" width="150" class="center"/></center>
+    <script>
+      console.log('about to fetech uniware logo');
+      fetch('images/uniware.jpg').then(response =>{
+        console.log(response);
+        return response.blob();
+      }).then(blob =>{
+      console.log(blob);
+      document.getElementById('uniware').src= URL.createObjectURL(blob);
+      });
+    </script>
+    <div class="b">
+      <h1>Welcome to Uniware CRM</h1>
+    </div>
+    <center><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></center>
+
+    <div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/avatar.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+  </body>
+</html>
