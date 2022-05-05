@@ -42,13 +42,161 @@
                     <li></li>
           </ul>
         </div>
-<table>
-<tr>
-<td>Tenant Name<td>
-<td><td>
-<td>Search Category<td>
-<td><td>
-</tr>
-</table>
+<table cellpadding="0" cellspacing="0" border="0" class="maintable" align="center" width="100%" valign="middle">
+                <tbody><tr class="tabtitle">
+                <td colspan="7">
+                    <table cellspacing="0" cellpadding="0" width="100%">
+                        <tbody><tr>  
+                            <td class="titletext">
+                                <font size="3px">Search For Bus Services </font>
+                            </td>
+                            <td align="right" class="midtext">
+                                <font color="Maroon">
+                                    Booking Open
+                                </font>
+                                06/05/2022 
+                                To 
+                                <input type="hidden" name="booking_open_till" value="04/06/2022" id="booking_open_till"> 
+                                04/06/2022
+                            </td>
+                            <td align="right" class="midtext">
+                                <font color="Maroon">
+                                    <blink>
+                                        Maintenance Time
+                                    </blink>
+                                </font>
+                                02:00 To 
+                                03:00
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+            <tr>
+                <td class="simpletext" align="center">
+                    From Stop 
+                
+                </td>
+                
+                <td class="simpletext"></td>
+                
+                <td class="simpletext" align="center">
+                    To Stop 
+                
+                    
+                </td>
+                
+                
+                
+                <td class="simpletext" align="center">
+                    Journey Date 
+                </td>
+    <!--            <td align="center">
+                    Break Journey
+                </td>-->
+                <td class="simpletext" align="center">
+                    Depot Name 
+                </td>
+                
+                
+            </tr>
+            <tr>
+
+                <td align="center">
+                    <div id="fromstopinput">
+                        <input type="text" name="fromstop" maxlength="15" size="15" value="" onblur="showFromStop();" id="fromstop" class="html-text-box ac_input" autocomplete="off">
+                        
+                    </div>
+    <!--                
+                    <div id="fromstopDropDown"></div>-->
+                </td>
+                <td align="center">
+    <!--                <input type="button"  id="go" onclick="swapValues()" value="Swap">-->
+                    <a onclick="swapValues()"><img src="https://rsrtconline.rajasthan.gov.in/images/swap.png" name="swap" width="34" height="21" border="0" alt=""></a>
+                </td>
+
+                <td align="center">
+                    <div id="tostopinput">
+                        <input type="text" name="tostop" maxlength="15" size="15" value="" onblur="getDepotName();showToStop();" id="tostop" class="html-text-box ac_input" autocomplete="off">
+                    </div>
+    <!--                <div id="tostopDropDown"></div>
+                    -->
+                    
+                </td>
+                 
+                
+                
+                <td align="center">
+                    
+                    <input type="text" name="journeyDate" maxlength="10" size="10" value="" readonly="readonly" id="journeyDate" class="html-text-box">
+                        <a onclick="displayCalendar(document.forms[0].journeyDate, 'dd/mm/yyyy', this);">
+                            <img src="https://rsrtconline.rajasthan.gov.in/images/calendar.gif" name="imgCalendar" width="34" height="21" border="0" alt=""></a>
+                        <input type="hidden" name="deptTm" value="00:00" id="deptTm">
+
+                </td>
+                
+    <!--            <td align="center">
+                    
+                    <input type="checkbox" id="splitsearch" name="splitsearch"/>
+                </td>-->
+                
+                <td align="center">
+                    <select name="depotName" id="depotName" class="html-select" width="100px;" style="width: 120px;margin: 10px;">
+                               <option value=""> Depot Name </option>    
+                        </select>
+                </td>
+               
+                
+                <td></td>
+    <!--            <td   class="simpletext">
+                    Bus Service Type :
+                </td>
+                <td  >
+                    <select name="busservicetype" id="busservicetype" class="html-select"><option value="ALL">-- ANY --</option>
+                        <option value="GND">AC GANDHI RATH</option>
+<option value="ACS">AC SLEEPER</option>
+<option value="DLX">DELUX</option>
+<option value="EXP">EXPRESS</option>
+<option value="GMN">GRAMEEN</option>
+<option value="AC">LUXURY</option>
+<option value="ORD">ORDINARY</option>
+<option value="SLX">SEMI DELUX</option>
+<option value="NAC">SLEEPER DELUXE</option>
+<option value="SSL">SLEEPER SEMI DELUX</option>
+<option value="SL">STAR LINE</option>
+<option value="VOL">SUPER LUXURY</option>
+<option value="VLF">SUPER LUXURY LOW FARE</option>
+<option value="VLC">SUPER LUXURY MXL</option></select>	
+
+                </td>-->
+            </tr>
+
+            <tr>
+                <td colspan="7" height="45" align="center" valign="middle">
+
+                    <input type="radio" name="directJourney" value="d" onclick="radioCheck()" id="directJourney" checked="checked">Direct Service
+                    <input type="radio" name="multicityJourney" value="c" onclick="radioCheck1()" id="multicityJourney">Connecting Service
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7" height="45" align="center" valign="middle">
+
+                    <input class="html-button" type="button" onclick="return callfrm(document.getElementById('currentdate').value,document.getElementById('journeyDate').value,document.getElementById('fromstop').value,document.getElementById('tostop').value,document.getElementById('depotName').value);" value="Search" name="search">
+                    <input class="html-button" type="button" onclick=" return resetPage();" value="Reset" name="resert">
+                   
+                    <br>
+                
+                    <input class="html-button" type="button" onclick=" return showEnquiry();" value="Bus Enquiry" name="enquiry">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <div class="errormessage" align="center">
+
+                    </div>
+                </td>
+            </tr>
+    </tbody></table>
   </body>
 </html>
