@@ -10,14 +10,16 @@
   <body>
         <div class="context">
           <center><img src = "" id="uniware" width="150" class="center"/></center>
-          <script>
-          console.log('about to fetech uniware logo');
-          fetch('images/uniware.jpg').then(response =>{
-          console.log(response);
-          console.log(blob);
-          document.getElementById('uniware').src= URL.createObjectURL(blob);
-          });
-          </script>
+              <script>
+      console.log('about to fetech uniware logo');
+      fetch('images/uniware.jpg').then(response =>{
+        console.log(response);
+        return response.blob();
+      }).then(blob =>{
+      console.log(blob);
+      document.getElementById('uniware').src= URL.createObjectURL(blob);
+      });
+    </script>
           <h1>Welcome to Unicommerce CRM</h1>
         </div>
         <div class="area" >
