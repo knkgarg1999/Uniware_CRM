@@ -23,13 +23,13 @@ body{
     font-size: 20px;
 }
 
-.context img {
+/* .context img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /* vertical-align: super; */
+  vertical-align: super;
   width: 20%;
-}
+} */
     
 .area{
     background: #4e54c8;  
