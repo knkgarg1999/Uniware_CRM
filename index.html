@@ -19,7 +19,7 @@ h1 {
   font-family: Copperplate, Papyrus, fantasy;
   }
 
-  /* Full-width input fields */
+/* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -29,32 +29,18 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
+/* Set a style for buttons */
 button {
   background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
-  margin: 8px 700px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button1 {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px ;
+  margin: 8px;
   border: none;
   cursor: pointer;
   width: 100%;
 }
 
 button:hover {
-  opacity: 0.8;
-}
-
-button1:hover {
   opacity: 0.8;
 }
 
@@ -168,11 +154,11 @@ span.psw {
     <div class="b">
       <h1>Welcome to Uniware CRM</h1>
     </div>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    <center><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></center>
 
-<div id="id01" class="modal">
+    <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/action_page.php" method="post">
+    <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="avatar.jpg" alt="Avatar" class="avatar">
