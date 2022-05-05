@@ -8,14 +8,14 @@
 .context {
     width: 100%;
     position: absolute;
-    top:50vh;
+    top:10vh;
     
 }
 
 .context h1{
     text-align: center;
     color: #fff;
-    font-size: 50px;
+    font-size: 20px;
 }
 
 
