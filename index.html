@@ -10,17 +10,29 @@
   <body>
         <div class="context">
           <center><img src = "" id="uniware"/></center>
-              <script>
-      console.log('about to fetech uniware logo');
-      fetch('images/uniware.jpg').then(response =>{
-        console.log(response);
-        return response.blob();
-      }).then(blob =>{
-      console.log(blob);
-      document.getElementById('uniware').src= URL.createObjectURL(blob);
-      });
-    </script>
-          <h1>Welcome to Unicommerce CRM</h1>
+          <script>
+          console.log('about to fetech uniware logo');
+          fetch('images/uniware.jpg').then(response =>{
+          console.log(response);
+          return response.blob();
+          }).then(blob =>{
+          console.log(blob);
+          document.getElementById('uniware').src= URL.createObjectURL(blob);
+          });
+         </script>
+         <h1>Welcome to Unicommerce CRM</h1>
+<table cellpadding="0" cellspacing="0" border="0" class="maintable" align="center"width="100%" valign="middle">
+  <tr>
+    <td align="center">
+       Tenant Name 
+    </td>
+    <td></td>
+    <td align="center">
+       Field    
+     </td>               
+  </tr>
+</table>
+
         </div>
         <div class="area" >
           <ul class="circles">
